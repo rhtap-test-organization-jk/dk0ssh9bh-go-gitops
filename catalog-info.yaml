@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dk0ssh9bh-go-gitops
+  description: This is GitOps manifest for dk0ssh9bh-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: dk0ssh9bh-go
+    jenkins.io/job-full-name: dk0ssh9bh-go-gitops
+    backstage.io/kubernetes-id: dk0ssh9bh-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dk0ssh9bh-go
